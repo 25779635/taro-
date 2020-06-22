@@ -1,0 +1,12 @@
+taro微信小程序开发：页面跳转方式
+标签： taro navigateto navigateback redirectto 页面跳转
+1、switchTab：只能跳转到tabBar配置页面（写在app.json里tabbar的路径url）
+taro.switchTab({ url: '/pages/index/index' })
+2、redirectTo：关闭当前页面，跳转到应用内的某个页面
+taro.redirectTo({ url: '/pages/index/index' })
+3、navigateTo：保留当前页面，跳转到应用内的某个页面
+taro.navigateTo({ url: '/pages/index/index' })
+4、reLaunch：关闭所有页面，打开应用内的某个页面，一般用于注册页面，切换账号
+taro.reLaunch({ url: '/pages/index/index' })
+5、navigateBack：返回上级页面，参数delta为返回页面层数，默认1，大于现有页面数时返回首页
+taro.navigateBack({ delta: 2 })
